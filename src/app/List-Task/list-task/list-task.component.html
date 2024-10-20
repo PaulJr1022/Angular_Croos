@@ -1,0 +1,28 @@
+
+
+<div class="justify-content-between">
+    <input type="text" class="form-control w-25" placeholder="Search...">
+    <button type="button" class="btn btn-dark" [routerLink]="['add']"><i class="bi bi-plus-lg"></i>New Task</button>
+  </div>
+
+  <table border="1" class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">DueDate</th>
+        <th scope="col">Priority</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td>{{task.id}}</td>
+        <td>{{task.title}}</td>
+        <td>{{task.description}}</td>
+        <td>{{task.dueDate}}</td>
+        <td>{{task.priority}}</td>
+      </tr>
+    </tbody>
+  </table>
+
